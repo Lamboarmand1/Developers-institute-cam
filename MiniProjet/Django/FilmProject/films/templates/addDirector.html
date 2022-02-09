@@ -1,0 +1,10 @@
+{% extends 'partials/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Add director Page{% endblock %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="submit" class="btn btn-primary" value="Add Director">
+    </form>
+{% endblock  %}

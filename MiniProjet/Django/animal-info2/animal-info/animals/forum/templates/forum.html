@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Forum Page {% endblock %}
+{% block styles %}
+    <style>
+        .row{
+            width: 60%;
+            }
+    </style>
+{% endblock %}
+
+{% block content %}
+<br>
+    <h1>Welcome to our forum page</h1><br><br>
+    <div class="container my-container" >
+        {% if posts %}
+            {% for post in posts %}
+                <div class="row my-2" style="border: 2px solid green">
+                    <div class="col mx-auto py-2">
+                        <p >{{ post.text }}</p>
+                        <p class="float-right">Written by : {{ post.author.username | upper }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %} Sorry no posts yet, Add some.
+        {% endif %}
+        <br><br>
+        <div class="row">
+                    <div class="col">
+                        <form class="form-inline my-2 my-lg-0" method="POST" >
+                          {% csrf_token %}
+                          <input class="form-control mr-sm-2" type="text" placeholder="Type your comment here" aria-label="Search" name="comment">
+                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add comment</button>
+                        </form>
+                    </div>
+                </div>
+    </div>
+{% endblock%}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page {% endblock %}
+
+{% block content %}
+{% if messages %}
+<ul class="messages">
+    {% for msg in messages %}
+    <li class="alert alert-{{msg.tags}}">{{msg}}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<div class="container">
+    <h1> Our Animals</h1>
+    {% if family %}
+    <h3 class="text-center">Animals of the family {{family.name |upper}}</h3>
+    {% endif %}
+    <a class="btn btn-outline-success float-right" href="{% url 'add' %}">+ Add a new animal </a>
+    {% if search %}
+    <h3 class="text-center">Results for your search : {{ search }}</h3>
+    {% endif %}
+    <p>Welcome and hope you'll enjoy our zoo page</p>
+    <div class="row">
+    {% for animal in animals %}
+        {% if animal.image %}
+        <div class="col col-4">
+            <div class="card" style="width: 18rem;">
+                <a href="{% url 'buy' animal.id%}"><button class="rounded-circle btn-outline-success" style="position:absolute; z-index:2;">BUY</button></a>
+              <img class="card-img-top" src="{{animal.image.url}}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{animal.name|upper}}</h5>
+                  <p><i class="fa fa-child"></i> Belongs to the family {{ animal.family.name }}</p>
+                  <p><i class="fa fa-paw"></i> Has {{ animal.legs }} legs</p>
+                  <p><i class="fa fa-clock"></i> Average speed {{ animal.speed }}</p>
+                <a href="{% url 'animal_d' animal.id %}" class="btn btn-primary">Watch a video about this animal</a>
+              </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+{% endblock%}

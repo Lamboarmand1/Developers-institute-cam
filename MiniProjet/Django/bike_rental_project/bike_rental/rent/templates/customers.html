@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+</head>
+<body>
+<h2>All customers</h2>
+
+<ul>{% for cust in customers %}
+    <li>
+        <ul>
+            <li>First Name : {{ cust.firstname}}</li>
+            <li>Last Name : {{ cust.lastname}}</li>
+            <li>Phone number : {{ cust.phonenumber}}</li>
+            <a href="{% url 'customer' cust.id %}"><button>More details</button></a>
+        </ul>
+    </li>
+{% endfor%}
+</ul>
+</body>
+</html>

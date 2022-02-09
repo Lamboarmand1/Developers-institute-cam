@@ -1,0 +1,557 @@
+<DOCTYPE html>
+    <html>
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="description" content="Colo Shop Template">
+          <meta name="viewport" content="width-device-width, initial-scale=1">
+
+          <!--Bootstrap cdn-->
+
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+
+            <!-- css file -->
+
+          <link rel="stylesheet" type="text/css" href="style.css">
+
+            <!-- font awesome cdn -->
+          <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+           
+           <title>Welcome to Buy & share</title>
+           
+           <style>
+  
+             @charset "utf-8";
+
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2? family= Poppins & display=swap');
+
+/* body general */
+html{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-size: 15px;
+  font-family:'poppins',sans-serif;
+  font-weight: 400px;
+  line-height: 24px;
+  color: #444;
+  background-image: radial-gradient(#fff, #eaf2fb);
+}
+
+div{
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+  margin-bottom: 0px;
+}
+
+p{
+  font-size: 20px;
+  font-family: 'poppins',sans-serif;
+  line-height: 1.7;
+  font-weight: 500;
+  color: #1e1e27;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px; 
+}
+
+p a{
+  display: inline;
+  position: relative;
+  color: inherit;
+  border-bottom: 2px solid #fde0db;
+  transition: all 200ms ease;
+}
+
+a, a:hover, a:active, a:link{
+
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px; 
+  text-decoration: none;
+}
+
+
+h1{
+  font-size: 72px;
+}
+h2{
+  font-size: 40px;
+}
+h3{
+  font-size: 29px;
+}
+h4{
+  font-size: 25px;
+}
+h5{
+  font-size: 16px;
+}
+h6{
+  font-size: 15px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px; 
+  color: #444;
+}
+.trans_300{
+  transition: all 300ms ease;
+}
+
+
+/* specification */
+
+.header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color: #fff;
+  z-index: 10;
+}
+
+/* main_nav_container */
+
+.main_nav_container{
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  z-index: 10;
+
+}
+
+.navbar{
+  width: auto;
+  float: right;
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+.navbar_menu li{
+  display: inline-block;
+}
+
+.navbar_menu li a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  padding: 20px;
+  color: #1e1e27;
+
+  
+}
+.navbar_menu li a:hover{
+  color:  #FFA200;
+}
+.navbar_user{
+  margin-left: 37px;
+}
+
+.navbar_user li{
+  display: inline-block;
+  text-align: center;
+}
+
+.navbar_user li a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40px;
+  height: 40px;
+  color: #1e1e27;
+  transition: color 0.3s ease;
+  position: relative;
+}
+.checkout{
+  color: 
+}
+.checkout a{
+  background-color: #eceff6;
+  border-radius: 50%;
+}
+#checkout_items{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  width: 20px;
+  height: auto;
+  background-color: #FE0006;
+  color:#fff;
+  font-size: 12px;
+  border-radius: 50px;
+}
+.logo_container{
+  position: absolute;
+  top: 40px;
+  transform: translateY(-50%);
+  left: 15px;
+
+}
+
+.logo_container a{
+  font-size: 22px;
+  color:  #1e1e27 ;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.logo_container a sub{
+  color: #FFA200;
+  text-transform: none;
+}
+.logo_container a small{
+  color: #FE0006;
+}
+          </style>
+        </head>
+        <body>
+           
+          <nav>
+              <header class="Header trans_300">
+
+                <!-- main navbar -->
+          
+                <div class="main_nav_container ">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-12 text-right">
+                        <div class="logo_container">
+                          <a href="#"> <i class="bi bi-cart4"></i> <i>Buy</i> <small>&</small> <sub><i>Share</i></sub></a>
+                        </div>
+                        <nav class="navbar">
+                          <ul class="navbar_menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="guest_page.html">Shop</a></li>
+                            <li><a href="login.html">Blog</a></li>
+                            <li><a href="AboutUs.html">About</a></li>
+                            <li><a href="#contact_us">Contact</a></li>
+                          </ul>
+                          <ul class="navbar_user">
+                            <li><a href="#"><i class="bi bi-search"></i></a></li>
+                            <li><a href="#"><i class="bi bi-person-circle"></i></a></li>
+                            <li class="checkout">
+                              <a href="#">
+                                <i class="bi bi-basket2-fill"></i>
+                                <span id="checkout_items" class="checkout_items">0</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+          
+            </nav>
+          
+            <!-- Card presentations -->
+
+
+
+            
+         <h3 style="text-align:center;padding-top: 100px;color: #FFA200">Hommes</h3>
+
+
+
+            <div class="cardi" style="padding-left:100px; padding-top:100px">
+  
+              <div class="row">
+               <div class="col col-4">
+               <div class="card" style="width: 18rem;">
+              <img src="article3.jpg" class="card-img-top" alt="..." width="230px" height="300px">
+              <div class="card-body">
+                <h5 class="card-title">Costume trois pieces gris, cravate bleu ciel</h5>
+                <p class="card-text">120000XAF.</p>
+                <a href="login.html" class="btn btn-primary" style="background-color: #FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+            <div class="col col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="article4.jpg" class="card-img-top" alt="..." width="230px" height="300px">
+              <div class="card-body">
+                <h5 class="card-title">T-shirt veste légère</h5>
+                <p class="card-text">35000XAF</p>
+                <a href="login.html" class="btn btn-primary" style="background-color: #FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+            
+            <div class="col col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="urbanM2.jpg" class="card-img-top" alt="..." width="230px" height="300px">
+              <div class="card-body">
+                <h5 class="card-title">Costume trois pièces bleu-marine</h5>
+                <p class="card-text">250000XAF</p>
+                <a href="login.html" class="btn btn-primary" style="background-color:#FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+               
+             </div>
+             </div>
+
+           
+             <h3 style="text-align:center; color: orange; padding-top: 70px;">Femmes</h3>
+           
+             <div class="cardi" style="padding-left:100px; padding-top:100px">
+  
+              <div class="row">
+               <div class="col col-4">
+               <div class="card" style="width: 18rem;">
+              <img src="joeyy-lee-wZgcKvE0vko-unsplash.jpg" class="card-img-top" alt="..." width="230px" height="370px">
+              <div class="card-body">
+                <h5 class="card-title">Robe noir sexy</h5>
+                <p class="card-text">50.000</p>
+                <a href="login.html" class="btn btn-primary" style="background-color:#FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+            <div class="col col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="molly-mears-AX-7NFFrOZo-unsplash.jpg" class="card-img-top" alt="..." width="230px" height="370px">
+              <div class="card-body">
+                <h5 class="card-title">Blue night-ware</h5>
+                <p class="card-text">12000XAF</p>
+                <a href="login.html" class="btn btn-primary" style="background-color:#FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+            
+            <div class="col col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="roland-denes-nvDU0y4FeIY-unsplash.jpg" class="card-img-top" alt="..." width="230px" height="370px">
+              <div class="card-body">
+                <h5 class="card-title">Black Diva D</h5>
+                <p class="card-text">35000XAF</p>
+                <a href="login.html" class="btn btn-primary" style="background-color:#FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+               
+             </div>
+             </div>
+
+             <h3 style="text-align:center; color: orange; padding-top: 70px;">Haute couture</h3>
+           
+             <div class="cardi" style="padding-left:100px; padding-top:100px">
+  
+              <div class="row">
+               <div class="col col-4">
+               <div class="card" style="width: 18rem;">
+              <img src="olga-zabegina-A3MleA0jtoE-unsplash.jpg" class="card-img-top" alt="..." width="270px" height="370px">
+              <div class="card-body">
+                <h5 class="card-title">Ensemble noir H&B</h5>
+                <p class="card-text">70.000XAF</p>
+                <a href="login.html" class="btn btn-primary" style="background-color:#FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+            <div class="col col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="wesley-tingey-nVs43FLFb9U-unsplash.jpg" class="card-img-top" alt="..." width="270px" height="370px">
+              <div class="card-body">
+                <h5 class="card-title">White party gawn</h5>
+                <p class="card-text">87000XFA</p>
+                <a href="login.html" class="btn btn-primary" style="background-color:#FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+            
+            <div class="col col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="article2.jpg" class="card-img-top" alt="..." width="290px" height="370px">
+              <div class="card-body">
+                <h5 class="card-title">Caustume trois pieces bleu marine</h5>
+                <p class="card-text">230000XAF</p>
+                <a href="login.html" class="btn btn-primary" style="background-color:#FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+               
+             </div>
+             </div>
+
+             <h3 style="text-align:center; color: orange; padding-top: 70px;">Tech & Accessoire</h3>
+
+             <div class="cardi" style="padding-left:100px; padding-top:100px">
+  
+              <div class="row">
+               <div class="col col-4">
+               <div class="card" style="width: 18rem;">
+              <img src="AZUS.jpg" class="card-img-top" alt="..." width="230px" height="190px">
+              <div class="card-body">
+                <h5 class="card-title">Asus As i7(7emeGth)</h5>
+                <p class="card-text">300000XFA</p>
+                <a href="login.html" class="btn btn-primary" style="background-color:#FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+            <div class="col col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="G6.jpg" class="card-img-top" alt="..." width="230px" height="190px">
+              <div class="card-body">
+                <h5 class="card-title">Google Home (IA)</h5>
+                <p class="card-text">110000XAF</p>
+                <a href="login.html" class="btn btn-primary" style="background-color:#FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+            
+            <div class="col col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="IPHONE13.jpg" class="card-img-top" alt="..." width="230px" height="190px">
+              <div class="card-body">
+                <h5 class="card-title">Iphone13 Pro Max (1To)</h5>
+                <p class="card-text">850000XAF</p>
+                <a href="login.html" class="btn btn-primary" style="background-color:#FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+               
+             </div>
+             </div>
+             
+             <h3 style="text-align:center; color: orange; padding-top: 70px;">Urban</h3>
+             <div class="cardi" style="padding-left:100px; padding-top:100px">
+  
+              <div class="row">
+               <div class="col col-4">
+               <div class="card" style="width: 18rem;">
+              <img src="leyli-nova-gd0qpyteVFY-unsplash.jpg" class="card-img-top" alt="..." width="230px" height="350px">
+              <div class="card-body">
+                <h5 class="card-title">Daily wear & sacoche transparente</h5>
+                <p class="card-text">8000XAF</p>
+                <a href="login.html" class="btn btn-primary" style="background-color:#FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+            <div class="col col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="urbanM1.jpg" class="card-img-top" alt="..." width="230px" height="350px">
+              <div class="card-body">
+                <h5 class="card-title">Veste jean, sweat blanc</h5>
+                <p class="card-text">25000XAF</p>
+                <a href="login.html" class="btn btn-primary" style="background-color:#FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+            
+            <div class="col col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="urbanM4.jpg" class="card-img-top" alt="..." width="230px" height="350px">
+              <div class="card-body">
+                <h5 class="card-title">Black gang pant & Balancia</h5>
+                <p class="card-text">25000XAF</p>
+                <a href="login.html" class="btn btn-primary" style="background-color:#FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+               
+             </div>
+             </div>
+
+             <h3 style="text-align:center; color: orange; padding-top: 70px;">Most popular</h3>
+             <div class="cardi" style="padding-left:100px; padding-top:100px">
+  
+              <div class="row">
+               <div class="col col-4">
+               <div class="card" style="width: 18rem;">
+              <img src="urbanF2.jpg" class="card-img-top" alt="..." width="230px" height="350px">
+              <div class="card-body">
+                <h5 class="card-title">Ensemble Sweat rose charlotte</h5>
+                <p class="card-text">12000XAF</p>
+                <a href="login.html" class="btn btn-primary" style="background-color:#FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+            <div class="col col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="urbanM3.jpg" class="card-img-top" alt="..." width="230px" height="350px">
+              <div class="card-body">
+                <h5 class="card-title">Blak pant & Balanciaga</h5>
+                <p class="card-text">20000XAF</p>
+                <a href="login.html" class="btn btn-primary" style="background-color:#FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+            
+            <div class="col col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="leyli-nova-gd0qpyteVFY-unsplash.jpg" class="card-img-top" alt="..." width="230px" height="350px">
+              <div class="card-body">
+                <h5 class="card-title">Daily wear & sacoche transparente</h5> 
+                  <p class="card-text">20000XAF</p>
+                <a href="login.html" class="btn btn-primary" style="background-color:#FFA200;">Purchase</a>
+              </div>
+            </div>
+            </div>
+               
+             </div>
+             </div>
+          
+              <footer style="padding-top: 5vh;padding-bottom: 5vh;">
+    <hr>
+
+    <div class="container" style="background-color: #FFA200;">
+  <div class="content" style="height: 50vh;background-image: url(contactus.PNG);background-size: cover;background-attachment: fixed;"></div>
+  <footer class="row">
+    <div class="social col-xs-12 col-sm-6 col-sm-push-6 my-3">
+      <ul class="row" style="margin-bottom: 2px !important;">
+        <li class="col-xs-6 col-sm-2">
+          <a href="#">
+            <i class="bi bi-twitter" style="color: #1e1e27"></i>
+          </a>
+        </li>
+        <li class="col-xs-6 col-sm-2">
+          <a href="#">
+            <i class="bi bi-facebook" style="color: #1e1e27"></i>
+          </a>
+        </li>
+        <li class="col-xs-6 col-sm-2">
+          <a href="#">
+            <i class="bi bi-instagram" style="color: #1e1e27"></i>
+          </a>
+        </li>
+        <li class="col-xs-6 col-sm-2">
+          <a href="#">
+            <i class="bi bi-envelope-open-fill" style="color: #1e1e27"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="copyright col-xs-12 col-sm-3 col-sm-pull-6 text-center my-3">
+      <p>&copy; Made By Dev Squad</p>
+    </div>
+    
+    <div class="impression col-xs-12 col-sm-3 col-sm-pull-6 my-3">
+      <p><i class="bi bi-heart-fill" style="color: #FE0006"></i> <i class="bi bi-heart-fill" style="color: #FE0006"></i> <i class="bi bi-heart-fill" style="color: #FE0006"></i></p>
+    </div>
+  </footer>
+</div>
+
+
+        </body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </html>

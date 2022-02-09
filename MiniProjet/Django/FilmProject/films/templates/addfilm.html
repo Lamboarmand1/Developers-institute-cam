@@ -1,0 +1,10 @@
+{% extends 'partials/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Add film Page{% endblock %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="submit" class="btn btn-primary mt-4" value="Add a new film">
+    </form>
+{% endblock  %}

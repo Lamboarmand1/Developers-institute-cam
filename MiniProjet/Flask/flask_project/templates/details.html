@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %} Details Produit {% endblock %}
+
+{% block content %}
+  {% for k,v in product.items() %}
+  <p>{{k}} : {{ v }}</p>
+  {% endfor %}
+
+    <a href="{{ url_for('show_product') }}"><button> Liste de tous les produits</button></a>
+ {% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}<title>Student - Login</title> {% endblock %}
+{% block main_content %}
+
+{% for category, message in get_flashed_messages(with_categories=True) %}
+      <div class="alert-{{category}}">{{category | upper}}: {{ message }}</div>
+    {% endfor %}
+
+  <form method="post" action="">
+    {{ form.hidden_tag() }}
+    <div class="mb-3">
+    {{ form.first_name.label(class="form-label") }}
+    {{ form.first_name(size=32,class="form-control") }}
+    </div>
+      <div class="mb-3">
+    {{ form.last_name.label(class="form-label") }}
+    {{ form.last_name(size=32, class="form-control") }}
+      </div>
+      <div class="mb-3">
+    {{ form.age.label(class="form-label") }}
+    {{ form.age(class="form-control") }}
+      </div>
+    {{ form.submit(class="btn btn-primary") }}
+  </form>
+
+{% endblock %}

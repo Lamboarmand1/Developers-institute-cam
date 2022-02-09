@@ -1,0 +1,30 @@
+{% extends 'partials/base.html' %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+{% if messages %}
+{% for message in messages %}
+    <p class="alert alert-{{message.tags}}">{{ message }}</p>
+{% endfor %}
+{% endif %}
+{% if not films %}
+    <h2 class="text-center mt-4">Sorry we don't any movie for the moment</h2>
+{% else %}
+{% for film in films %}
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{film.title}}</h5>
+        <p class="card-text">Release date : {{film.release_date}}</p>
+
+          <p class="card-text">Category : {% for cat in film.category.all %}{{cat.name}}, {% endfor %} </p>
+
+          {% for director in film.director.all %}
+          <p class="card-text">Directed by : {{director.first_name}} {{director.last_name}}</p>
+          {% endfor %}
+
+        <a href="#" class="btn btn-primary">Comment</a>
+      </div>
+    </div>
+{% endfor %}
+{% endif %}
+{% endblock  %}

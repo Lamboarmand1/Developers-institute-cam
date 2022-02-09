@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer details</title>
+</head>
+<body>
+    <h3>Details for customer {{ customer.firstname }}</h3>
+    {{ customer.lastname }}  |
+{{ customer.phonenumber }}  |
+{{ customer.email }}  |
+{{ customer.country }}  |
+{{ customer.city }}  |
+{{ customer.address }}  |
+<br>
+<a href="{% url 'customers'%}"><button>See all the customers</button></a><br>
+
+</body>
+</html>

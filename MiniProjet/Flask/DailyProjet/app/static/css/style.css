@@ -1,0 +1,36 @@
+#bg-video {
+    height: 100vh;
+    width: 400vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#bg-video::-webkit-media-controls {
+    display: none !important;
+}
+
+.video-overlay {
+    position: absolute;
+    background-color: rgba(35,45,57,0.8);
+    top: 0;
+    left: 0;
+    bottom: 7px;
+    width: 100%;
+    height: 100vh;
+}
+#login1{
+    background-color: transparent !important;
+}
+h1{
+    color: #DA0000 !important;
+    font-family: 'Playfair Display', serif !important;
+	font-size: 24px !important;
+	font-size: 2.4rem !important;
+	font-style: italic !important;    
+}
+h3{
+    color: black !important;
+}
+p{
+    color: blanchedalmond !important;
+}

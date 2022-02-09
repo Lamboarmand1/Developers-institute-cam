@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All rentals</title>
+</head>
+<body>
+<h3>All rentals:</h3>
+    {% for rent in rentals %}
+    Date:{{ rent.rental_date }}|
+    Customer name :{{ rent.customer.lastname }} |
+    Type de vehicle :{{ rent.vehicle_rent.vehicletype.name }}
+<a href="{% url 'rental' rent.id %}"><button>More details</button></a><br>
+    {% endfor %}
+</body>
+</html>

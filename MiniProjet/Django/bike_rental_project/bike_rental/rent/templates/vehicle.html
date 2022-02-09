@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Vehicles</title>
+</head>
+<body>
+<h3>All Vehicles:</h3>
+    {% for vehicule in vehicles %}
+    VehicleType:{{ vehicule.vehicletype }}|
+    Size :{{ vehicle.size }} |
+    Date de création :{{ vehicle.created_date }}
+    cost : {{vehicle.cost}}
+<a href="{% url 'vehicle' rent.id %}"><button>More details</button></a><br>
+    {% endfor %}
+</body>
+</html>

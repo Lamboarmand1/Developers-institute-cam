@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+	<title>daily</title>
+	<script type="text/javascript">
+		function DrawRect(){
+
+	let i,j,k;
+	let ar=10;
+	for(i=1; i<=ar;i++){
+		if (i==1 || i==ar) {
+			for(j=1; j<=10;j++){
+				document.write("*");
+			}			
+
+			document.write("<br/>");
+		}
+		else{
+			document.write("*");
+			for(k=2;k<10;k++){
+				document.write("&nbsp;&nbsp");
+			}
+			document.write("*<br/>");
+		}
+	}
+
+}
+DrawRect()
+let word= new Array(4);
+for(let a=0;a<4;a++){
+	word[a]=prompt("Entrer plusieur mot separe par des virigule");
+}
+document.write(word[0]+","+word[1]+","+word[2]+","+word[3]);
+
+
+
+	</script>
+</head>
+<body>
+
+
+
+</body>
+</html>

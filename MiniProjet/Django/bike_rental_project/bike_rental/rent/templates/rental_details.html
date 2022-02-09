@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rental details</title>
+</head>
+<body>
+<h3>customer details:</h3>
+    {{ rent.customer.lastname }}
+    {{ rent.customer.firstname }}
+    {{ rent.customer.city }}
+<h3>vehicle details:</h3>
+    {{ rent.vehicle_rent.vehicletype.name }} type <br>
+    {{ rent.vehicle_rent.size.name }} size<br>
+    {{ rent.vehicle_rent.cost}}$
+<h3>rental details:</h3>
+    Date de location : {{ rent.rental_date }}<br>
+    {% if rent.return_date %}
+        Return on {{rent.return_date }}
+    {% else %}
+        Not yet returned
+    {% endif %}
+<br>
+<a href="{% url 'rentals' %}"><button>See all the rentals</button></a><br>
+
+</body>
+</html>

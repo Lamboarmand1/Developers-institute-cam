@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+{% block title %}Animal Page {% endblock %}
+
+{% block content %}
+<h2 class="text-center my-4">Video for animal :{{a.name}} </h2>
+<div class="d-flex justify-content-center">
+<iframe class="" width="660" height="350" src="{{ a.video }}"
+title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+    </div>
+{% endblock %}

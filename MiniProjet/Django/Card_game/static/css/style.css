@@ -1,0 +1,13 @@
+#header{
+    background: url("../bg.webp");
+    background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	z-index: 2;
+    height: 100vh;
+}
+h1{
+    top: 50%;
+}
+

@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+
+{% block title %}Panier Page {% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Hey {{user}} voici tes achats</h2>
+    <p>N'hesites pas a confirmer tes achats en cliquant sur le bouton ci-dessous</p>
+    <div class="row">
+    {% for animal in animals %}
+        {% if animal.image %}
+        <div class="col col-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{{animal.image.url}}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{animal.name|upper}}</h5>
+                  <p><i class="fa fa-child"></i> Belongs to the family {{ animal.family.name }}</p>
+
+              </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <button class="btn btn-outline-warning mt-4">Confirmer Achat</button>
+</div>
+{% endblock %}

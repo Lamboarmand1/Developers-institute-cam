@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD CITY</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+    {% for category, message in get_flashed_messages(with_categories=True) %}
+      <div class="alert-{{category}}">{{category | upper}}: {{ message }}</div>
+    {% endfor %}
+
+  <form method="post" action="{{url_for('get_data')}}">
+    <input type="text" max_length="15" placeholder="Enter the city's name" name="city" required>
+    <input type="text" placeholder="Enter the country name" name="country" required>
+      <br><input type="number" placeholder="Enter the number of inhabitants" name="population" >
+      <br><input type="number" placeholder="Enter the city's area" name="city_area" >
+      <br><input type="text" placeholder="Enter the city's longitude" name="longitude" >
+      <br><input type="text" placeholder="Enter the city's latitude" name="latitude" >
+      <br><label>This city is the capital?</label>
+      <input type="radio"  value="True" name="capital" >Yes
+          <input type="radio"  value="False" name="capital" >No
+      <br><input type="submit">
+
+  </form>
+</body>
+</html>
